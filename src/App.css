@@ -1,38 +1,131 @@
-.App {
-  text-align: center;
+body {
+  background-color: #f7f7f7;
+  font-family: 'Montserrat';
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#main-title {
+  color: #00A8E1;
+  font-weight: bold;
+  margin-left: 5px;
+  font-size: 120%;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.card-title {
+  color: #00A8E1;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.cards-wrapper {
+  margin: auto;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  flex-wrap: wrap;
+} 
+.card-container {
+  flex-grow: 1;
+  margin: 8px;
+  perspective: 1000;
+  position: relative;
+  text-align: left;
+  padding-bottom: 10px;
+
+  display: inline-block;
+  max-height: 90px;
+  height: 90px;
+
+  border-radius: 5px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.05);
+  background-color: white;
+  width: auto;
+  transition: 0.2s;
+}
+
+.card-content {
+  margin: 15px;
+}
+
+.card-container:hover, button:hover{
+  transform: scale(1.1)
+}
+
+#author-input-field, #reason-input-field{
+  height: 30px; 
+  line-height: 30px; 
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 17px;
+}
+
+#categories {
+  width:250px;
+}
+
+#status {
+  width:300px;
+}
+
+.statusChangeDate {
+  width:400px;
+}
+
+.reason-card {
+  width: 300px;
+}
+.schedule-impact {
+  width: 300px;
+}
+
+.add-to-req {
+  width: 325px;
+}
+
+.author-container {
+  width: 350px;
+}  
+ 
+input {
+  outline: none !important;
+  border:1px solid #00A8E1;
+  width: 100%;
+  border-radius: 5px;
+} 
+
+.yes-no-label {
+  font-weight: bold;
+  color: grey;
+}
+
+#change-date {
+  color: lightgray;
+  font-size: 15px;
+  font-weight: bolder;
+}
+
+button {
+  margin-left: 5px;
+  background-color: #00A8E1;
   color: white;
+  font-size: 15px;
+  font-weight: bold;
+  width: 100px;
+  border-radius: 5px;
+  height: 35px;
+
 }
 
-.App-link {
-  color: #61dafb;
+button:active {
+  transform: translateY(4px);
+  transition: 0.2s;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.yes-no-div {
+  display: grid;
+  justify-content: start;
+  column-gap: 15px;
+  grid-template-areas: 
+  "yes-label no-label"
+  "yes-radio no-radio"
 }
+
+input[type="radio"]{
+  width: 20px;
+}
+

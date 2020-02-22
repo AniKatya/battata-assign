@@ -33,21 +33,3 @@ class AddToReq extends Component {
     }
 }
 export default AddToReq;
-
-
-/*{this.props.buttonClicked ? label:
-
-              <table>
-                  <thead>
-                      <tr className = "yes-no-label">
-                          <td>Yes</td>
-                          <td>No</td>
-                      </tr>
-                  </thead>
-                  <tbody>
-                      <tr>
-                          <td><input type="radio" key="yes" value="true" checked={this.state.addBool===true} onChange={this.handleAddChange} /></td>
-                          <td><input type="radio" key="no" value="false" checked={this.state.addBool===false} onChange={this.handleAddChange} /></td>
-                      </tr>
-                  </tbody>
-              </table>}*/
